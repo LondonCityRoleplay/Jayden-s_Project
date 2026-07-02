@@ -10,9 +10,6 @@
 
 <body>
 
-<!-- =========================
-BOOT SCREEN
-========================= -->
 <section id="boot">
 <pre class="boot">
 ┌──────────────────────────────────────────────┐
@@ -23,9 +20,6 @@ BOOT SCREEN
 </pre>
 </section>
 
-<!-- =========================
-INTRO SCREEN
-========================= -->
 <div id="intro" class="hidden">
   <div class="glass intro">
     <h1>Jayden</h1>
@@ -34,12 +28,8 @@ INTRO SCREEN
   </div>
 </div>
 
-<!-- =========================
-MAIN APP
-========================= -->
 <main id="app" class="hidden">
 
-<!-- HEADER -->
 <header class="glass header">
   <img src="https://i.ibb.co/7xm1ZFzd/IMG-1114.jpg" class="avatar" alt="Profile Picture">
 
@@ -49,42 +39,31 @@ MAIN APP
   </div>
 </header>
 
-<!-- =========================
-HAMBURGER NAVIGATION
-========================= -->
-<div id="navWrapper" class="nav-wrapper">
+<div class="nav-wrapper">
 
-  <button id="hamburger" class="hamburger" aria-label="Menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+<button id="hamburger" class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
-  <nav id="navMenu" class="nav-menu hidden">
+<nav id="navMenu" class="nav-menu hidden">
 
-    <button onclick="navigate('about'); closeMenu();">About</button>
-    <button onclick="navigate('projects'); closeMenu();">Projects</button>
-    <button onclick="navigate('skills'); closeMenu();">Skills</button>
-    <button onclick="navigate('websites'); closeMenu();">Websites</button>
-    <button onclick="navigate('contact'); closeMenu();">Contact</button>
+<button onclick="navigate('about'); closeMenu()">About</button>
+<button onclick="navigate('projects'); closeMenu()">Projects</button>
+<button onclick="navigate('skills'); closeMenu()">Skills</button>
+<button onclick="navigate('websites'); closeMenu()">Websites</button>
+<button onclick="navigate('contact'); closeMenu()">Contact</button>
 
-    <hr>
+<hr>
 
-    <a href="./README.md" target="_blank" rel="noopener noreferrer">
-      README.md
-    </a>
+<a href="./README.md" target="_blank" rel="noopener noreferrer">README.md</a>
+<a href="./LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a>
 
-    <a href="./LICENSE" target="_blank" rel="noopener noreferrer">
-      LICENSE
-    </a>
-
-  </nav>
+</nav>
 
 </div>
 
-<!-- =========================
-STATUS
-========================= -->
 <section id="status" class="glass">
 <h2>Live System Status</h2>
 <ul>
@@ -96,125 +75,64 @@ STATUS
 </ul>
 </section>
 
-<!-- =========================
-ABOUT
-========================= -->
 <section id="about" class="glass">
 <h2>About me</h2>
-<p>
-Full stack developer working on API systems, Discord bots, automation tools, and scalable web applications.
-</p>
+<p>Full stack developer working on API systems, Discord bots, automation tools, and scalable web applications.</p>
 </section>
 
-<!-- =========================
-PROJECTS
-========================= -->
 <section id="projects" class="glass">
-
 <h2>Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-<img src="https://i.ibb.co/twd0mpVX/IMG-0439.jpg" alt="Axion Labs">
+<img src="https://i.ibb.co/twd0mpVX/IMG-0439.jpg">
 <h3>Axion Labs</h3>
 </div>
 
 <div class="card">
-<img src="https://i.ibb.co/G4sbW3rB/LCRP.png" alt="London City Roleplay">
+<img src="https://i.ibb.co/G4sbW3rB/LCRP.png">
 <h3>London City Roleplay</h3>
 </div>
 
 </div>
-
-<h3>Discord Bots</h3>
-<p>Moderation, tickets, verification, API systems, database automation.</p>
-
 </section>
 
-<!-- =========================
-SKILLS
-========================= -->
 <section id="skills" class="glass">
 <h2>Skills</h2>
-<p>
-HTML • CSS • JavaScript • TypeScript • Python • C# • C++ • Lua • PHP • Rust
-</p>
-<p>
-React • Node.js • Express • MongoDB • PostgreSQL • Discord.js • REST APIs
-</p>
+<p>HTML • CSS • JavaScript • TypeScript • Python • C# • C++ • Lua • PHP • Rust</p>
+<p>React • Node.js • Express • MongoDB • PostgreSQL • Discord.js • REST APIs</p>
 </section>
 
-<!-- =========================
-WEBSITES
-========================= -->
 <section id="websites" class="glass">
-
 <h2>Websites</h2>
 
-<p>
-London City Roleplay —
-<a href="https://londoncityroleplay.org/" target="_blank" rel="noopener noreferrer">
-https://londoncityroleplay.org/
-</a>
-</p>
-
-<p>
-Axion Labs —
-<a href="https://axion-labs.dev/" target="_blank" rel="noopener noreferrer">
-https://axion-labs.dev/
-</a>
-</p>
-
-<p>
-Axion Labs Bot —
-<a href="https://axionlabs.cc/" target="_blank" rel="noopener noreferrer">
-https://axionlabs.cc/
-</a>
-</p>
+<p><a href="https://londoncityroleplay.org/" target="_blank" rel="noopener noreferrer">London City Roleplay</a></p>
+<p><a href="https://axion-labs.dev/" target="_blank" rel="noopener noreferrer">Axion Labs</a></p>
+<p><a href="https://axionlabs.cc/" target="_blank" rel="noopener noreferrer">Axion Labs Bot</a></p>
 
 </section>
 
-<!-- =========================
-CONTACT
-========================= -->
 <section id="contact" class="glass">
-
 <h2>Contact</h2>
 
 <p>Discord: jayden_aj470</p>
 <p>Instagram: @axi0n_labs</p>
-<p>Threads: @axi0n_labs</p>
-<p>Facebook: @Axion Labs</p>
 
-<p>
-Discord Server —
-<a href="https://discord.gg/RfWcJcXGMQ" target="_blank" rel="noopener noreferrer">
-Join Server
-</a>
-</p>
+<p><a href="https://discord.gg/RfWcJcXGMQ" target="_blank" rel="noopener noreferrer">Discord Server</a></p>
 
 </section>
 
 </main>
 
-<!-- =========================
-OVERLAYS
-========================= -->
 <div id="detailPanel"></div>
 
 <div id="docViewer" class="glass hidden doc-viewer">
   <div id="docContent"></div>
 </div>
 
-<!-- =========================
-FOOTER
-========================= -->
 <footer>© 2026 Jayden</footer>
 
-<!-- =========================
-SCRIPTS
-========================= -->
 <script src="src/main.js" defer></script>
 <script src="src/animations.js" defer></script>
 <script src="src/typing.js" defer></script>
