@@ -31,20 +31,18 @@ function bootSequence() {
 
   setTimeout(() => {
     if (boot) boot.style.display = "none";
-    if (intro) intro.style.display = "block";
   }, 1800);
 
   setTimeout(() => {
-    if (intro) intro.style.opacity = "0";
-  }, 3200);
+    if (intro) intro.remove();
 
-  setTimeout(() => {
-    if (intro) {
-      intro.style.display = "none";
-      intro.remove();
+    if (app) {
+      app.style.display = "block";
     }
 
-    if (app) app.style.display = "block";
+    document.querySelectorAll("main section").forEach(sec => {
+      sec.style.display = "none";
+    });
 
     navigate("about");
   }, 3800);
