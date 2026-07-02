@@ -284,3 +284,45 @@ a:hover {
     font-size: 15px;
   }
 }
+
+.license-terminal {
+  font-family: monospace;
+  background: rgba(0,0,0,0.4);
+  padding: 15px;
+}
+
+.log-line {
+  font-size: 13px;
+  margin: 4px 0;
+  color: #bffbff;
+}
+
+.log-line.info {
+  color: cyan;
+}
+
+.log-line.warn {
+  color: #ff3b3b;
+  text-shadow: 0 0 6px rgba(255,0,0,0.4);
+}
+
+.log-section {
+  border: 1px solid rgba(0,255,255,0.2);
+  margin: 10px 0;
+}
+
+.log-header {
+  padding: 10px;
+  cursor: pointer;
+  color: cyan;
+  font-weight: bold;
+}
+
+.log-body {
+  display: none;
+  padding: 10px;
+}
+
+.log-body.open {
+  display: block;
+}
