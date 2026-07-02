@@ -10,16 +10,14 @@ function toggleMenu() {
   const menu = document.getElementById("navMenu");
   if (!menu) return;
 
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "flex";
-  }
+  menu.classList.toggle("open");
 }
 
 function closeMenu() {
   const menu = document.getElementById("navMenu");
-  if (menu) menu.style.display = "none";
+  if (!menu) return;
+
+  menu.classList.remove("open");
 }
 
 function bootSequence() {
