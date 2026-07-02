@@ -25,18 +25,27 @@ function bootSequence() {
   const intro = document.getElementById("intro");
   const app = document.getElementById("app");
 
-  setTimeout(() => boot.style.opacity = "0", 1200);
+  setTimeout(() => {
+    if (boot) boot.style.opacity = "0";
+  }, 1200);
 
   setTimeout(() => {
-    boot.style.display = "none";
-    intro.style.display = "block";
+    if (boot) boot.style.display = "none";
+    if (intro) intro.style.display = "block";
   }, 1800);
 
-  setTimeout(() => intro.style.opacity = "0", 3200);
+  setTimeout(() => {
+    if (intro) intro.style.opacity = "0";
+  }, 3200);
 
   setTimeout(() => {
-    intro.style.display = "none";
-    app.style.display = "block";
+    if (intro) {
+      intro.style.display = "none";
+      intro.remove();
+    }
+
+    if (app) app.style.display = "block";
+
     navigate("about");
   }, 3800);
 }
