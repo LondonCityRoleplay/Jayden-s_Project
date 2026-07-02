@@ -3,173 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jayden | Portfolio</title>
+<title>Jayden | Systems Portfolio</title>
 
 <link rel="stylesheet" href="css/style.css">
-
-<script>
-document.documentElement.style.visibility = "hidden";
-window.addEventListener("load", () => {
-  document.documentElement.style.visibility = "visible";
-});
-</script>
-
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<div class="grid"></div>
+<div class="scanlines"></div>
+
+<!-- HEADER -->
 <header class="topbar">
-  <div class="brand">Jayden</div>
-
-  <button class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <nav id="menu" class="menu">
-    <button onclick="showPage('home')">Home</button>
-    <button onclick="showPage('about')">About</button>
-    <button onclick="showPage('projects')">Projects</button>
-    <button onclick="showPage('skills')">Skills</button>
-    <button onclick="showPage('contact')">Contact</button>
-  </nav>
+<div class="profile">
+<img src="assets/profile.png" class="pfp">
+<div class="name">JAYDEN Portfolio</div>
+</div>
 </header>
 
-<main>
+<!-- HERO -->
+<section class="hero">
+<p class="subtitle">
+Backend systems • SaaS platforms • Automation tools
+</p>
 
-<section id="home" class="page active">
-  <div class="card accent">
-    <h1>Jayden</h1>
-    <p>Full Stack Developer • API Systems • Discord Bots</p>
-  </div>
+<div class="badges">
+<span>Full-Stack Engineer</span>
+<span>API Systems</span>
+<span>Discord SaaS</span>
+</div>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Focus</h3>
-      <p>Backend systems, automation, API design, Discord tooling.</p>
-    </div>
-
-    <div class="card">
-      <h3>Style</h3>
-      <p>Clean systems that scale, not throwaway prototypes.</p>
-    </div>
-  </div>
+<a class="cta" href="#systems">ENTER SYSTEMS</a>
 </section>
 
-<section id="about" class="page">
-  <div class="card accent">
-    <h2>About</h2>
-    <p>I build backend systems more than websites.</p>
-  </div>
+<!-- ABOUT ME -->
+<section class="section">
 
-  <div class="grid">
-    <div class="card">
-      <h3>What I do</h3>
-      <p>APIs, bots, automation tools, integrations.</p>
-    </div>
+<div class="accordion" onclick="toggle(this)">
+<div class="accordion-title">▼ ABOUT ME</div>
 
-    <div class="card">
-      <h3>Approach</h3>
-      <p>Keep logic clean, reduce manual work, make systems stable.</p>
-    </div>
+<div class="accordion-body">
+<p>
+Software engineer focused on scalable backend / frontend systems, SaaS platforms, and automation infrastructure.
+</p>
 
-    <div class="card">
-      <h3>Current work</h3>
-      <p>Axion Labs ecosystem + internal tooling.</p>
-    </div>
-  </div>
-</section>
+<p>
+EXPERIENCE:
+- TypeScript full-stack development<br>
+- SaaS architecture design<br>
+- Discord automation systems<br>
+- API integration systems
+</p>
 
-<section id="projects" class="page">
-
-  <div class="grid">
-
-    <div class="card accent">
-      <h3>Axion Labs</h3>
-      <p>API + automation ecosystem with Discord integration.</p>
-    </div>
-
-    <div class="card">
-      <h3>London City Roleplay</h3>
-      <p>Server systems, moderation tools, bot automation.</p>
-    </div>
-
-    <div class="card">
-      <h3>API Systems</h3>
-      <p>Auth systems, data flow, service integrations.</p>
-    </div>
-
-  </div>
+<p>
+CAPABILITIES:
+- Custom authentication systems<br>
+- Multi-tenant SaaS platforms<br>
+- Web + mobile architecture<br>
+- Backend system design
+</p>
+</div>
+</div>
 
 </section>
 
-<section id="skills" class="page">
+<!-- SYSTEMS -->
+<section id="systems" class="section">
 
-  <div class="grid">
+<div class="accordion" onclick="toggle(this)">
+<div class="accordion-title">▼ SYSTEMS OVERVIEW</div>
 
-    <div class="card">
-      <h3>Frontend</h3>
-      <p>HTML, CSS, JavaScript, TypeScript</p>
-    </div>
+<div class="accordion-body">
 
-    <div class="card">
-      <h3>Backend</h3>
-      <p>Node.js, Python, C#</p>
-    </div>
+<!-- AXION LABS -->
+<div class="project" onclick="toggleProject(this)">
+<div class="project-header">
+<img src="assets/axion.png" class="logo">
+<div>
+<h3>Axion Labs</h3>
+<p>Web + Mobile TypeScript</p>
+</div>
+</div>
 
-    <div class="card">
-      <h3>Data</h3>
-      <p>MongoDB, PostgreSQL</p>
-    </div>
+<div class="project-body">
+TypeScript full-stack system with custom authentication,
+shared API layer, and modular backend architecture.
+Currently the mobile app is still under development stage & the website is temporary unavailable.
+</div>
+</div>
 
-    <div class="card">
-      <h3>Systems</h3>
-      <p>APIs, Discord bots, automation, integrations</p>
-    </div>
+<!-- BOT -->
+<div class="project" onclick="toggleProject(this)">
+<div class="project-header">
+<img src="assets/axion-bot.png" class="logo">
+<div>
+<h3>Axion Labs Bot</h3>
+<p>Discord SaaS platform</p>
+</div>
+</div>
 
-  </div>
+<div class="project-body">
+Discord OAuth SaaS system with multi-tenant architecture,
+tier-based features, and dashboard control panel.
+</div>
+</div>
+
+<!-- LCR -->
+<div class="project" onclick="toggleProject(this)">
+<div class="project-header">
+<img src="assets/lcr.png" class="logo">
+<div>
+<h3>London City Roleplay</h3>
+<p>Community OAuth platform</p>
+</div>
+</div>
+
+<div class="project-body">
+Discord OAuth community platform with role sync and
+permission-based access control system.
+</div>
+</div>
+
+<!-- DISCORD SYSTEMS -->
+<div class="project" onclick="toggleProject(this)">
+<div class="project-header">
+<div class="logo placeholder">DS</div>
+<div>
+<h3>Discord Bot Systems</h3>
+<p>Automation infrastructure</p>
+</div>
+</div>
+
+<div class="project-body">
+Moderation, verification, ticketing, and command systems
+built with modular architecture.
+</div>
+</div>
+
+</div>
+</div>
 
 </section>
 
-<section id="contact" class="page">
-
-  <div class="grid">
-
-    <div class="card accent">
-      <h3>Discord</h3>
-      <p>jayden_aj470</p>
-    </div>
-
-    <div class="card">
-      <h3>London City Roleplay</h3>
-      <p>
-        Website:
-        <a href="https://londoncityroleplay.org/" target="_blank">londoncityroleplay.org</a>
-      </p>
-
-      <p>
-        Discord:
-        <a href="https://discord.gg/RfWcJcXGMQ" target="_blank">Join Server</a>
-      </p>
-
-      <p>Support: ticket system inside Discord</p>
-    </div>
-
-    <div class="card">
-      <h3>Socials</h3>
-      <p>Instagram: @axi0n_labs</p>
-      <p>Threads: @axi0n_labs</p>
-      <p>Facebook: @Axion Labs</p>
-    </div>
-
-  </div>
-
+<!-- CONTACT -->
+<section class="section contact">
+<div>Discord: jayden_aj470</div>
+<div>Email: axionlabs.cc</div>
+<div>GitHub: LondonCityRoleplay</div>
+<div>Instagram: @axi0n_labs</div>
+<div>Threads: @axi0n_labs</div>
+<div>Facebook: Axion Labs</div>
 </section>
 
-</main>
-
-<script src="src/main.js" defer></script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
