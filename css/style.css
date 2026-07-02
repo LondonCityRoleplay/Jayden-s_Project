@@ -17,30 +17,71 @@ body {
   padding: 0 20px;
   background: rgba(17, 22, 28, 0.95);
   border-bottom: 1px solid #1c232b;
+  z-index: 100;
 }
 
 .brand {
   font-weight: 600;
 }
 
-/* NAV */
-.nav button {
+/* HAMBURGER */
+.hamburger {
+  width: 42px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  background: #e8e8e8;
+  border-radius: 2px;
+}
+
+/* MENU */
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  width: 180px;
+  background: #11161c;
+  border: 1px solid #1c232b;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 999;
+}
+
+.menu.open {
+  display: flex;
+}
+
+.menu button {
   background: none;
   border: none;
   color: #a3a3a3;
-  margin-left: 10px;
+  text-align: left;
+  padding: 8px;
   cursor: pointer;
-  font-size: 14px;
+  border-radius: 6px;
 }
 
-.nav button:hover {
-  color: #ffffff;
+.menu button:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
 }
 
 /* LAYOUT */
 main {
   padding-top: 80px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -48,19 +89,34 @@ main {
 .page {
   display: none;
   opacity: 0;
-  transition: opacity 180ms ease;
+  transform: translateY(6px);
+  transition: all 180ms ease;
 }
 
 .page.active {
   display: block;
   opacity: 1;
+  transform: translateY(0);
 }
 
-/* CARD */
-.card {
+/* PANELS */
+.panel {
   background: #11161c;
   border: 1px solid #1c232b;
   border-radius: 12px;
-  padding: 20px;
+  padding: 18px;
   margin: 10px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 30px;
 }
