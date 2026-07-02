@@ -21,7 +21,13 @@ window.addEventListener("load", () => {
 <header class="topbar">
   <div class="brand">Jayden</div>
 
-  <nav class="nav">
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="menu" class="menu">
     <button onclick="showPage('home')">Home</button>
     <button onclick="showPage('about')">About</button>
     <button onclick="showPage('projects')">Projects</button>
@@ -32,41 +38,97 @@ window.addEventListener("load", () => {
 
 <main>
 
-<section id="home" class="page">
-  <div class="card">
+<section id="home" class="page active">
+  <div class="panel hero">
     <h1>Jayden</h1>
     <p>Full Stack Developer • API Systems • Discord Bots</p>
+
+    <p style="color:#a3a3a3; margin-top:10px;">
+      I mainly work on backend systems, APIs, and Discord bots. Most of what I build is around automation and making things scale properly instead of just working once locally.
+    </p>
   </div>
 </section>
 
 <section id="about" class="page">
-  <div class="card">
+  <div class="panel">
     <h2>About</h2>
-    <p>I like to build digital systems such as web applications/systems, Discord Bots, Configurating API integrations, I am currently in the process of building a Axion Labs Mobile app which will comply with the axion labs website ( hence why the axion labs website is temporary down ) </p>
+
+    <p>
+      I build systems more than websites. APIs, bots, automation tools, integrations — that kind of stuff.
+    </p>
+
+    <p style="margin-top:10px;">
+      Most of my work ends up backend-heavy because that’s where the actual logic and scaling problems are.
+    </p>
+
+    <p style="margin-top:10px;">
+      Right now I’m building out my own stack of tools under Axion Labs and a few related projects.
+    </p>
   </div>
 </section>
 
 <section id="projects" class="page">
-  <div class="card">
-    <h2>Projects</h2>
-    <p>Axion Labs • London City Roleplay • Discord Systems • API Infrastructure</p>
+  <div class="grid">
+
+    <div class="panel">
+      <h3>Axion Labs</h3>
+      <p>
+        My main system right now. APIs, bots, automation, and internal tools all tied together.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h3>London City Roleplay</h3>
+      <p>
+        Community systems, moderation tooling, role management, and bot automation for server operations.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h3>API Systems</h3>
+      <p>
+        Backend services for auth, data handling, and connecting different platforms together.
+      </p>
+    </div>
+
   </div>
 </section>
 
 <section id="skills" class="page">
-  <div class="card">
+  <div class="panel">
     <h2>Skills</h2>
-    <p>HTML • CSS • JavaScript • TypeScript • Node.js • Python • C# • MongoDB • PostgreSQL</p>
+
+    <p>Frontend: HTML, CSS, JavaScript, TypeScript</p>
+    <p>Backend: Node.js, Python, C#</p>
+    <p>Databases: MongoDB, PostgreSQL</p>
+    <p>Other: APIs, Discord bots, automation, integrations</p>
   </div>
 </section>
 
 <section id="contact" class="page">
-  <div class="card">
+  <div class="panel">
     <h2>Contact</h2>
+
     <p>Discord: jayden_aj470</p>
+
+    <p>
+      London City Roleplay Discord:
+      <a href="https://discord.gg/RfWcJcXGMQ" target="_blank" rel="noopener noreferrer">
+        Join Server
+      </a>
+    </p>
+
     <p>Instagram: @axi0n_labs</p>
     <p>Threads: @axi0n_labs</p>
     <p>Facebook: @Axion Labs</p>
+
+    <p style="margin-top:10px;">
+      London City Support: tickets are handled inside the Discord server.
+    </p>
+
+    <p style="margin-top:10px;">
+      If it’s dev-related, Discord is usually the fastest way to reach me.
+    </p>
   </div>
 </section>
 
