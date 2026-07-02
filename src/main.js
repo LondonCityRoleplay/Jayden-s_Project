@@ -1,14 +1,8 @@
-const sections = ["about", "projects", "skills", "websites", "contact", "status"];
-
 function navigate(id) {
   const all = document.querySelectorAll("main section");
 
   all.forEach(sec => {
-    if (sec.id === id) {
-      sec.style.display = "block";
-    } else {
-      sec.style.display = "none";
-    }
+    sec.style.display = sec.id === id ? "block" : "none";
   });
 }
 
@@ -20,15 +14,35 @@ function closeMenu() {
   if (burger) burger.classList.remove("active");
 }
 
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  const burger = document.getElementById("hamburger");
+
+  if (!menu || !burger) return;
+
+  const isOpen = !menu.classList.contains("hidden");
+
+  if (isOpen) {
+    menu.classList.add("hidden");
+    burger.classList.remove("active");
+  } else {
+    menu.classList.remove("hidden");
+    burger.classList.add("active");
+  }
+}
+
 document.addEventListener("click", (e) => {
-  const viewer = document.getElementById("docViewer");
-  if (!viewer) return;
+  const menu = document.getElementById("navMenu");
+  const burger = document.getElementById("hamburger");
 
-  const isInside = viewer.contains(e.target);
-  const isButton = e.target.tagName === "BUTTON";
+  if (!menu || !burger) return;
 
-  if (!isInside && !isButton) {
-    viewer.classList.add("hidden");
+  const clickedInside = menu.contains(e.target);
+  const clickedBurger = burger.contains(e.target);
+
+  if (!clickedInside && !clickedBurger) {
+    menu.classList.add("hidden");
+    burger.classList.remove("active");
   }
 });
 
@@ -55,9 +69,12 @@ function bootSequence() {
   setTimeout(() => {
     intro.style.display = "none";
     app.classList.remove("hidden");
-
     navigate("about");
   }, 3800);
 }
 
 window.addEventListener("load", bootSequence);
+
+window.toggleMenu = toggleMenu;
+window.closeMenu = closeMenu;
+window.navigate = navigate;
