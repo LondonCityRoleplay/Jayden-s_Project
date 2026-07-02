@@ -6,6 +6,14 @@
 <title>Jayden | Portfolio</title>
 
 <link rel="stylesheet" href="css/style.css">
+
+<script>
+document.documentElement.style.visibility = "hidden";
+window.addEventListener("load", () => {
+  document.documentElement.style.visibility = "visible";
+});
+</script>
+
 </head>
 
 <body>
@@ -14,11 +22,11 @@
   <div class="brand">Jayden</div>
 
   <nav class="nav">
-    <button onclick="show('home')">Home</button>
-    <button onclick="show('about')">About</button>
-    <button onclick="show('projects')">Projects</button>
-    <button onclick="show('skills')">Skills</button>
-    <button onclick="show('contact')">Contact</button>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('projects')">Projects</button>
+    <button onclick="showPage('skills')">Skills</button>
+    <button onclick="showPage('contact')">Contact</button>
   </nav>
 </header>
 
@@ -34,21 +42,21 @@
 <section id="about" class="page">
   <div class="card">
     <h2>About</h2>
-    <p>I build web systems, APIs, automation tools, and also Discord bots </p>
+    <p>I like to build digital systems such as web applications/systems, Discord Bots, Configurating API integrations, I am currently in the process of building a Axion Labs Mobile app which will comply with the axion labs website ( hence why the axion labs website is temporary down ) </p>
   </div>
 </section>
 
 <section id="projects" class="page">
   <div class="card">
     <h2>Projects</h2>
-    <p>Axion Labs • London City Roleplay • API Systems • Discord Bots</p>
+    <p>Axion Labs • London City Roleplay • Discord Systems • API Infrastructure</p>
   </div>
 </section>
 
 <section id="skills" class="page">
   <div class="card">
     <h2>Skills</h2>
-    <p>HTML • CSS • JavaScript • TypeScript • Python • C# • Node.js • MongoDB • PostgreSQL</p>
+    <p>HTML • CSS • JavaScript • TypeScript • Node.js • Python • C# • MongoDB • PostgreSQL</p>
   </div>
 </section>
 
@@ -58,13 +66,13 @@
     <p>Discord: jayden_aj470</p>
     <p>Instagram: @axi0n_labs</p>
     <p>Threads: @axi0n_labs</p>
-    <p>Facebook: @axion labs</p>
+    <p>Facebook: @Axion Labs</p>
   </div>
 </section>
 
 </main>
 
-<script src="src/main.js"></script>
+<script src="src/main.js?v=1" defer></script>
 
 </body>
 </html>
