@@ -81,11 +81,18 @@ font-weight: bold;
 .accordion-body {
 display: none;
 padding: 15px;
+white-space: pre-wrap;
+line-height: 1.6;
+letter-spacing: 0.3px;
 }
 
 .accordion.active .accordion-body {
 display: block;
 }
+
+.accordion-body br {
+display: block;
+margin-bottom: 6px;
 
 /* PROJECT */
 .project {
@@ -123,4 +130,38 @@ display: block;
 text-align: center;
 padding: 40px;
 opacity: 0.8;
+}
+
+.name-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.verified-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transform: translateY(-1px);
+}
+
+.username-badge {
+  display: block;
+  margin: 8px auto 0 auto;
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.verified-icon {
+  filter: drop-shadow(0 0 6px cyan);
+}
+
+.preformat {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
 }
