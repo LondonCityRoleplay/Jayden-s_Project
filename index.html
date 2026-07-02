@@ -36,7 +36,7 @@ Software • Backend • Infrastructure
 <!-- ABOUT ME -->
 <section class="section">
 
-<div class="accordion" onclick="toggle(this)">
+<div class="accordion" onclick="toggleAccordion(this)">
   <div class="accordion-title">ABOUT ME</div>
 
   <div class="accordion-body">
@@ -58,14 +58,14 @@ Software • Backend • Infrastructure
 <!-- SYSTEMS -->
 <section class="section">
 
-<div class="accordion" onclick="toggle(this)">
+<div class="accordion" onclick="toggleAccordion(this)">
 
   <div class="accordion-title">SYSTEMS OVERVIEW</div>
 
   <div class="accordion-body">
 
     <!-- AXION LABS -->
-    <div class="project" onclick="toggleProject(this)">
+    <div class="project" onclick="toggleProject(this, event)">
       <div class="project-header">
         <img src="assets/axion.png" class="logo">
         <div>
@@ -82,7 +82,7 @@ Software • Backend • Infrastructure
     </div>
 
     <!-- BOT -->
-    <div class="project" onclick="toggleProject(this)">
+    <div class="project" onclick="toggleProject(this, event)">
       <div class="project-header">
         <img src="assets/axion-bot.png" class="logo">
         <div>
@@ -99,7 +99,7 @@ Software • Backend • Infrastructure
     </div>
 
     <!-- LCR -->
-    <div class="project" onclick="toggleProject(this)">
+    <div class="project" onclick="toggleProject(this, event)">
       <div class="project-header">
         <img src="assets/lcr.png" class="logo">
         <div>
@@ -115,7 +115,7 @@ Software • Backend • Infrastructure
     </div>
 
     <!-- DISCORD SYSTEMS -->
-    <div class="project" onclick="toggleProject(this)">
+    <div class="project" onclick="toggleProject(this, event)">
       <div class="project-header">
         <div class="logo placeholder">DS</div>
         <div>
