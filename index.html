@@ -35,12 +35,18 @@
   <button onclick="navigate('projects')">Projects</button>
   <button onclick="navigate('skills')">Skills</button>
   <button onclick="navigate('contact')">Contact</button>
+  <button onclick="openDoc('readme')">README</button>
+  <button onclick="openDoc('license')">LICENSE</button>
 </nav>
+
+<div id="docViewer" class="glass hidden doc-viewer">
+  <div id="docContent"></div>
+</div>
 
 <main id="app" class="hidden">
 
 <header class="glass header">
-  <img src="assets/profile.png" class="avatar">
+  <img src="https://i.ibb.co/7xm1ZFzd/IMG-1114.jpg" class="avatar" alt="Profile Picture">
 
   <div>
     <h1>Jayden</h1>
@@ -66,12 +72,12 @@ I have and am making it possible for users to host their bots / GitHub Repos on 
 also purchase website Domains from my website, I also make Discord Bots.</p>
 </section>
 
-<section class="glass">
+<section id="focus" class="glass">
 <h2>Personal Focus</h2>
 <p>Front-end & Back-end Web applications, API integrations, Axion-Labs Mobile & web, Building a game project</p>
 </section>
 
-<section class="glass">
+<section id="github" class="glass">
 <h2>GitHub Purpose</h2>
 <p>I use GitHub to sometimes code stuff like Discord Bots, integrations, or connect APIs together for database purposes.</p>
 </section>
@@ -82,12 +88,12 @@ also purchase website Domains from my website, I also make Discord Bots.</p>
 <div class="grid">
 
 <div class="card">
-<img src="assets/axion-labs.png">
+<img src="https://i.ibb.co/twd0mpVX/IMG-0439.jpg" alt="Axion Labs Logo">
 <h3>Axion Labs</h3>
 </div>
 
 <div class="card">
-<img src="assets/lcrp.png">
+<img src="https://i.ibb.co/G4sbW3rB/LCRP.png" alt="London City Roleplay Logo">
 <h3>London City Roleplay</h3>
 </div>
 
@@ -105,13 +111,6 @@ also purchase website Domains from my website, I also make Discord Bots.</p>
 <h2>Skills</h2>
 <p>HTML • CSS • JavaScript • TypeScript • C# • C++ • Python • Lua • PHP • Assembly • Rust</p>
 <p>React • Tailwind • Node.js • Express • MongoDB • PostgreSQL • Discord.js • REST APIs</p>
-</section>
-
-<section class="glass">
-<h2>Websites</h2>
-<p>London City Roleplay — https://londoncityroleplay.org/</p>
-<p>Axion Labs — https://axion-labs.dev</p>
-<p>Axion Labs Bot — https://axionlabs.cc</p>
 </section>
 
 <section id="contact" class="glass">
