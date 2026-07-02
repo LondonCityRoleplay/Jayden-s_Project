@@ -6,7 +6,9 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .glass {
@@ -22,13 +24,11 @@ body {
   white-space: pre;
   text-align: center;
   margin-top: 20vh;
-  transition: opacity 0.6s ease;
 }
 
 .intro {
   text-align: center;
   margin-top: 20vh;
-  transition: opacity 0.6s ease;
 }
 
 .header {
@@ -86,21 +86,17 @@ footer {
   z-index: 999;
 }
 
-.doc-viewer h2 {
-  margin-top: 0;
-}
-
 .nav-wrapper {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .hamburger {
   width: 45px;
   height: 40px;
-  background: rgba(20, 20, 20, 0.7);
+  background: rgba(20,20,20,0.7);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 8px;
   display: flex;
@@ -109,27 +105,12 @@ footer {
   gap: 6px;
   cursor: pointer;
   padding: 8px;
-  transition: 0.3s ease;
 }
 
 .hamburger span {
   height: 2px;
   width: 100%;
   background: white;
-  display: block;
-  transition: 0.3s ease;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-menu {
@@ -137,27 +118,25 @@ footer {
   top: 55px;
   right: 0;
   width: 190px;
-  background: rgba(15, 15, 15, 0.95);
+  background: rgba(15,15,15,0.95);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  backdrop-filter: blur(12px);
+  z-index: 99999;
 }
 
 .nav-menu button,
 .nav-menu a {
-  background: transparent;
+  background: none;
   border: none;
-  color: #e6e6e6;
+  color: white;
   text-align: left;
   padding: 8px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 14px;
-  border-radius: 6px;
 }
 
 .nav-menu button:hover,
@@ -167,27 +146,5 @@ footer {
 
 .nav-menu hr {
   border: 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-menu {
-    right: 0;
-    width: 160px;
-  }
-
-  .glass {
-    margin: 8px;
-    padding: 12px;
-  }
-
-  .doc-viewer {
-    width: 92%;
-    top: 8%;
-  }
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
