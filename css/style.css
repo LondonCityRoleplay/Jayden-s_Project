@@ -59,12 +59,12 @@ color: cyan;
 
 /* VERIFIED ICON */
 .verified-icon {
-width: 18px;
-height: 18px;
+width: 14px;
+height: 14px;
 object-fit: contain;
 flex-shrink: 0;
 transform: translateY(-1px);
-filter: drop-shadow(0 0 6px cyan);
+display: inline-block;
 }
 
 /* USERNAME BADGE */
