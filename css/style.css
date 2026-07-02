@@ -85,27 +85,13 @@ main {
   margin: auto;
 }
 
-/* PAGES */
+/* PAGE SYSTEM */
 .page {
   display: none;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: all 180ms ease;
 }
 
 .page.active {
   display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* PANELS */
-.panel {
-  background: #11161c;
-  border: 1px solid #1c232b;
-  border-radius: 12px;
-  padding: 18px;
-  margin: 10px;
 }
 
 /* GRID */
@@ -113,10 +99,29 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 12px;
+  margin: 10px;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 30px;
+/* CARDS */
+.card {
+  background: #11161c;
+  border: 1px solid #1c232b;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* IMPORTANT HIGHLIGHT CARD */
+.card.accent {
+  border: 1px solid #2b6fff;
+  background: rgba(43, 111, 255, 0.08);
+}
+
+/* LINKS */
+a {
+  color: #4ea1ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
