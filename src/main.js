@@ -1,10 +1,11 @@
-function toggle(el) {
+function toggleAccordion(el) {
   el.classList.toggle("active");
 }
 
-function toggleProject(el) {
+function toggleProject(el, event) {
+  if (event) event.stopPropagation();
   el.classList.toggle("active");
 }
 
-window.toggle = toggle;
+window.toggleAccordion = toggleAccordion;
 window.toggleProject = toggleProject;
