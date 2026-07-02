@@ -1,1 +1,8 @@
+<header class="glass header">
+  <img src="assets/profile.png" class="avatar" alt="Jayden">
 
+  <div>
+    <h1>Jayden</h1>
+    <p>Full Stack Developer • API Systems • Discord Bots</p>
+  </div>
+</header>
