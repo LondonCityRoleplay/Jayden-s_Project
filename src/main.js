@@ -1,55 +1,36 @@
-function navigate(id) {
-  const all = document.querySelectorAll("main section");
+let currentPage = "home";
 
-  all.forEach(sec => {
-    sec.style.display = sec.id === id ? "block" : "none";
-  });
-}
+function show(id) {
+  if (!id) return;
+  if (id === currentPage) return;
 
-function toggleMenu() {
-  const menu = document.getElementById("navMenu");
-  if (!menu) return;
+  const current = document.getElementById(currentPage);
+  const next = document.getElementById(id);
 
-  menu.classList.toggle("open");
-}
-
-function closeMenu() {
-  const menu = document.getElementById("navMenu");
-  if (!menu) return;
-
-  menu.classList.remove("open");
-}
-
-function bootSequence() {
-  const boot = document.getElementById("boot");
-  const intro = document.getElementById("intro");
-  const app = document.getElementById("app");
-
-  document.querySelectorAll("main section").forEach(sec => {
-    sec.style.display = "none";
-  });
-
-  if (app) app.hidden = true;
+  if (current) {
+    current.classList.remove("active");
+  }
 
   setTimeout(() => {
-    if (boot) boot.style.opacity = "0";
-  }, 1000);
+    if (next) {
+      next.classList.add("active");
+    }
+  }, 80);
 
-  setTimeout(() => {
-    if (boot) boot.remove();
-  }, 1400);
-
-  setTimeout(() => {
-    if (intro) intro.remove();
-
-    if (app) app.hidden = false;
-
-    navigate("about");
-  }, 2000);
+  currentPage = id;
 }
 
-window.addEventListener("load", bootSequence);
+function init() {
+  const pages = document.querySelectorAll(".page");
 
-window.navigate = navigate;
-window.toggleMenu = toggleMenu;
-window.closeMenu = closeMenu;
+  // HARD RESET: which ensures clean state
+  pages.forEach(p => p.classList.remove("active"));
+
+  const home = document.getElementById("home");
+  if (home) home.classList.add("active");
+
+  currentPage = "home";
+}
+
+window.show = show;
+window.addEventListener("DOMContentLoaded", init);
