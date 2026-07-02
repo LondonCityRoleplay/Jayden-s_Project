@@ -44,28 +44,6 @@ body {
   object-fit: cover;
 }
 
-.nav {
-  position: sticky;
-  top: 10px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  z-index: 50;
-}
-
-.nav button {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: #e6e6e6;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.nav button:hover {
-  background: rgba(255,255,255,0.12);
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -110,4 +88,106 @@ footer {
 
 .doc-viewer h2 {
   margin-top: 0;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.hamburger {
+  width: 45px;
+  height: 40px;
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px;
+  transition: 0.3s ease;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 100%;
+  background: white;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 190px;
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  backdrop-filter: blur(12px);
+}
+
+.nav-menu button,
+.nav-menu a {
+  background: transparent;
+  border: none;
+  color: #e6e6e6;
+  text-align: left;
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.nav-menu button:hover,
+.nav-menu a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-menu hr {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu {
+    right: 0;
+    width: 160px;
+  }
+
+  .glass {
+    margin: 8px;
+    padding: 12px;
+  }
+
+  .doc-viewer {
+    width: 92%;
+    top: 8%;
+  }
 }
