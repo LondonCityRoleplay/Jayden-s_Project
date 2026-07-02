@@ -25,27 +25,27 @@ function bootSequence() {
   const intro = document.getElementById("intro");
   const app = document.getElementById("app");
 
-  setTimeout(() => {
-    if (boot) boot.style.opacity = "0";
-  }, 1200);
+  document.querySelectorAll("main section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  if (app) app.hidden = true;
 
   setTimeout(() => {
-    if (boot) boot.style.display = "none";
-  }, 1800);
+    if (boot) boot.style.opacity = "0";
+  }, 1000);
+
+  setTimeout(() => {
+    if (boot) boot.remove();
+  }, 1400);
 
   setTimeout(() => {
     if (intro) intro.remove();
 
-    if (app) {
-      app.style.display = "block";
-    }
-
-    document.querySelectorAll("main section").forEach(sec => {
-      sec.style.display = "none";
-    });
+    if (app) app.hidden = false;
 
     navigate("about");
-  }, 3800);
+  }, 2000);
 }
 
 window.addEventListener("load", bootSequence);
