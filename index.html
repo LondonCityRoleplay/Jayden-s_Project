@@ -10,6 +10,9 @@
 
 <body>
 
+<!-- =========================
+BOOT SCREEN
+========================= -->
 <section id="boot">
 <pre class="boot">
 ┌──────────────────────────────────────────────┐
@@ -20,31 +23,23 @@
 </pre>
 </section>
 
-<section id="intro" class="hidden">
+<!-- =========================
+INTRO SCREEN
+========================= -->
+<div id="intro" class="hidden">
   <div class="glass intro">
     <h1>Jayden</h1>
-    <p>About Me</p>
-    <p>Skills</p>
+    <p>Loading Modules...</p>
+    <p>Initializing Systems...</p>
   </div>
-</section>
-
-<div id="detailPanel"></div>
-
-<nav id="nav" class="glass nav hidden">
-  <button onclick="navigate('about')">About</button>
-  <button onclick="navigate('projects')">Projects</button>
-  <button onclick="navigate('skills')">Skills</button>
-  <button onclick="navigate('contact')">Contact</button>
-  <button onclick="openDoc('readme')">README</button>
-  <button onclick="openDoc('license')">LICENSE</button>
-</nav>
-
-<div id="docViewer" class="glass hidden doc-viewer">
-  <div id="docContent"></div>
 </div>
 
+<!-- =========================
+MAIN APP
+========================= -->
 <main id="app" class="hidden">
 
+<!-- HEADER -->
 <header class="glass header">
   <img src="https://i.ibb.co/7xm1ZFzd/IMG-1114.jpg" class="avatar" alt="Profile Picture">
 
@@ -54,6 +49,42 @@
   </div>
 </header>
 
+<!-- =========================
+HAMBURGER NAVIGATION
+========================= -->
+<div id="navWrapper" class="nav-wrapper">
+
+  <button id="hamburger" class="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="navMenu" class="nav-menu hidden">
+
+    <button onclick="navigate('about'); closeMenu();">About</button>
+    <button onclick="navigate('projects'); closeMenu();">Projects</button>
+    <button onclick="navigate('skills'); closeMenu();">Skills</button>
+    <button onclick="navigate('websites'); closeMenu();">Websites</button>
+    <button onclick="navigate('contact'); closeMenu();">Contact</button>
+
+    <hr>
+
+    <a href="./README.md" target="_blank" rel="noopener noreferrer">
+      README.md
+    </a>
+
+    <a href="./LICENSE" target="_blank" rel="noopener noreferrer">
+      LICENSE
+    </a>
+
+  </nav>
+
+</div>
+
+<!-- =========================
+STATUS
+========================= -->
 <section id="status" class="glass">
 <h2>Live System Status</h2>
 <ul>
@@ -65,71 +96,128 @@
 </ul>
 </section>
 
+<!-- =========================
+ABOUT
+========================= -->
 <section id="about" class="glass">
 <h2>About me</h2>
-<p>I like to make modern website applications, Website Frontend & Backend, I work with API integration, 
-I have and am making it possible for users to host their bots / GitHub Repos on my website 
-also purchase website Domains from my website, I also make Discord Bots.</p>
+<p>
+Full stack developer working on API systems, Discord bots, automation tools, and scalable web applications.
+</p>
 </section>
 
-<section id="focus" class="glass">
-<h2>Personal Focus</h2>
-<p>Front-end & Back-end Web applications, API integrations, Axion-Labs Mobile & web, Building a game project</p>
-</section>
-
-<section id="github" class="glass">
-<h2>GitHub Purpose</h2>
-<p>I use GitHub to sometimes code stuff like Discord Bots, integrations, or connect APIs together for database purposes.</p>
-</section>
-
+<!-- =========================
+PROJECTS
+========================= -->
 <section id="projects" class="glass">
+
 <h2>Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-<img src="https://i.ibb.co/twd0mpVX/IMG-0439.jpg" alt="Axion Labs Logo">
+<img src="https://i.ibb.co/twd0mpVX/IMG-0439.jpg" alt="Axion Labs">
 <h3>Axion Labs</h3>
 </div>
 
 <div class="card">
-<img src="https://i.ibb.co/G4sbW3rB/LCRP.png" alt="London City Roleplay Logo">
+<img src="https://i.ibb.co/G4sbW3rB/LCRP.png" alt="London City Roleplay">
 <h3>London City Roleplay</h3>
 </div>
 
 </div>
 
 <h3>Discord Bots</h3>
-<p>Moderation, tickets, verification, API integrations, database systems.</p>
-
-<h3>Other Stuff</h3>
-<p>Random systems, APIs, tools, experiments.</p>
+<p>Moderation, tickets, verification, API systems, database automation.</p>
 
 </section>
 
+<!-- =========================
+SKILLS
+========================= -->
 <section id="skills" class="glass">
 <h2>Skills</h2>
-<p>HTML • CSS • JavaScript • TypeScript • C# • C++ • Python • Lua • PHP • Assembly • Rust</p>
-<p>React • Tailwind • Node.js • Express • MongoDB • PostgreSQL • Discord.js • REST APIs</p>
+<p>
+HTML • CSS • JavaScript • TypeScript • Python • C# • C++ • Lua • PHP • Rust
+</p>
+<p>
+React • Node.js • Express • MongoDB • PostgreSQL • Discord.js • REST APIs
+</p>
 </section>
 
+<!-- =========================
+WEBSITES
+========================= -->
+<section id="websites" class="glass">
+
+<h2>Websites</h2>
+
+<p>
+London City Roleplay —
+<a href="https://londoncityroleplay.org/" target="_blank" rel="noopener noreferrer">
+https://londoncityroleplay.org/
+</a>
+</p>
+
+<p>
+Axion Labs —
+<a href="https://axion-labs.dev/" target="_blank" rel="noopener noreferrer">
+https://axion-labs.dev/
+</a>
+</p>
+
+<p>
+Axion Labs Bot —
+<a href="https://axionlabs.cc/" target="_blank" rel="noopener noreferrer">
+https://axionlabs.cc/
+</a>
+</p>
+
+</section>
+
+<!-- =========================
+CONTACT
+========================= -->
 <section id="contact" class="glass">
+
 <h2>Contact</h2>
+
 <p>Discord: jayden_aj470</p>
-<p>Axion Labs: @axionlabs.cc</p>
 <p>Instagram: @axi0n_labs</p>
 <p>Threads: @axi0n_labs</p>
 <p>Facebook: @Axion Labs</p>
-<p>https://discord.gg/RfWcJcXGMQ</p>
+
+<p>
+Discord Server —
+<a href="https://discord.gg/RfWcJcXGMQ" target="_blank" rel="noopener noreferrer">
+Join Server
+</a>
+</p>
+
 </section>
 
 </main>
 
+<!-- =========================
+OVERLAYS
+========================= -->
+<div id="detailPanel"></div>
+
+<div id="docViewer" class="glass hidden doc-viewer">
+  <div id="docContent"></div>
+</div>
+
+<!-- =========================
+FOOTER
+========================= -->
 <footer>© 2026 Jayden</footer>
 
-<script src="src/main.js"></script>
-<script src="src/animations.js"></script>
-<script src="src/typing.js"></script>
+<!-- =========================
+SCRIPTS
+========================= -->
+<script src="src/main.js" defer></script>
+<script src="src/animations.js" defer></script>
+<script src="src/typing.js" defer></script>
 
 </body>
 </html>
