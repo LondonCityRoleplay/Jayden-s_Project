@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jayden | Systems Portfolio</title>
+
+<title>Jayden Systems</title>
 
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
@@ -15,147 +16,136 @@
 <div class="scanlines"></div>
 
 <!-- HEADER -->
-<header class="topbar">
-<div class="profile">
-<img src="assets/profile.png" class="pfp">
-<div class="name">JAYDEN Portfolio</div>
-</div>
-</header>
+<header class="hero">
+<img src="assets/profile.png" class="profile">
 
-<!-- HERO -->
-<section class="hero">
+<h1>JAYDENs Portfolio</h1>
+
 <p class="subtitle">
-Backend systems • SaaS platforms • Automation tools
+Software • Backend • Infrastructure
 </p>
 
 <div class="badges">
-<span>Full-Stack Engineer</span>
-<span>API Systems</span>
-<span>Discord SaaS</span>
+<span>Infrastructure</span>
+<span>APIs</span>
+<span>Discord Bots</span>
+<span>Databases</span>
 </div>
-
-<a class="cta" href="#systems">ENTER SYSTEMS</a>
-</section>
+</header>
 
 <!-- ABOUT ME -->
 <section class="section">
 
 <div class="accordion" onclick="toggle(this)">
-<div class="accordion-title">▼ ABOUT ME</div>
+  <div class="accordion-title">ABOUT ME</div>
 
-<div class="accordion-body">
-<p>
-Software engineer focused on scalable backend / frontend systems, SaaS platforms, and automation infrastructure.
-</p>
+  <div class="accordion-body">
+    Software engineer focused on scalable backend systems, SaaS platforms,
+    and automation infrastructure.<br><br>
 
-<p>
-EXPERIENCE:
-- TypeScript full-stack development<br>
-- SaaS architecture design<br>
-- Discord automation systems<br>
-- API integration systems
-</p>
+    TypeScript • Node.js • Express • MongoDB • Discord Bots<br><br>
 
-<p>
-CAPABILITIES:
-- Custom authentication systems<br>
-- Multi-tenant SaaS platforms<br>
-- Web + mobile architecture<br>
-- Backend system design
-</p>
-</div>
+    Experience building:
+    - Web applications
+    - Discord SaaS systems
+    - API architectures
+    - Multi-service backend systems
+  </div>
 </div>
 
 </section>
 
 <!-- SYSTEMS -->
-<section id="systems" class="section">
+<section class="section">
 
 <div class="accordion" onclick="toggle(this)">
-<div class="accordion-title">▼ SYSTEMS OVERVIEW</div>
 
-<div class="accordion-body">
+  <div class="accordion-title">SYSTEMS OVERVIEW</div>
 
-<!-- AXION LABS -->
-<div class="project" onclick="toggleProject(this)">
-<div class="project-header">
-<img src="assets/axion.png" class="logo">
-<div>
-<h3>Axion Labs</h3>
-<p>Web + Mobile TypeScript</p>
-</div>
-</div>
+  <div class="accordion-body">
 
-<div class="project-body">
-TypeScript full-stack system with custom authentication,
-shared API layer, and modular backend architecture.
-Currently the mobile app is still under development stage & the website is temporary unavailable.
-</div>
-</div>
+    <!-- AXION LABS -->
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-header">
+        <img src="assets/axion.png" class="logo">
+        <div>
+          <h3>Axion Labs</h3>
+          <p>Web + Mobile TypeScript</p>
+        </div>
+      </div>
 
-<!-- BOT -->
-<div class="project" onclick="toggleProject(this)">
-<div class="project-header">
-<img src="assets/axion-bot.png" class="logo">
-<div>
-<h3>Axion Labs Bot</h3>
-<p>Discord SaaS platform</p>
-</div>
-</div>
+      <div class="project-body">
+        Full-stack TypeScript platform with custom authentication system,
+        shared API layer, and modular backend architecture across web and mobile.
+        🚧Website temporary unavailable due to mobile development configurations🚧
+      </div>
+    </div>
 
-<div class="project-body">
-Discord OAuth SaaS system with multi-tenant architecture,
-tier-based features, and dashboard control panel.
-</div>
-</div>
+    <!-- BOT -->
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-header">
+        <img src="assets/axion-bot.png" class="logo">
+        <div>
+          <h3>Axion Labs Bot</h3>
+          <p>Discord SaaS Platform</p>
+        </div>
+      </div>
 
-<!-- LCR -->
-<div class="project" onclick="toggleProject(this)">
-<div class="project-header">
-<img src="assets/lcr.png" class="logo">
-<div>
-<h3>London City Roleplay</h3>
-<p>Community OAuth platform</p>
-</div>
-</div>
+      <div class="project-body">
+        Discord SaaS system with OAuth login, tier-based features,
+        multi-tenant architecture, and web dashboard control panel.
+        🚧Website temporary unavailable due to mobile development configurations🚧
+      </div>
+    </div>
 
-<div class="project-body">
-Discord OAuth community platform with role sync and
-permission-based access control system.
-</div>
-</div>
+    <!-- LCR -->
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-header">
+        <img src="assets/lcr.png" class="logo">
+        <div>
+          <h3>London City Roleplay</h3>
+          <p>Community OAuth Platform</p>
+        </div>
+      </div>
 
-<!-- DISCORD SYSTEMS -->
-<div class="project" onclick="toggleProject(this)">
-<div class="project-header">
-<div class="logo placeholder">DS</div>
-<div>
-<h3>Discord Bot Systems</h3>
-<p>Automation infrastructure</p>
-</div>
-</div>
+      <div class="project-body">
+        Discord OAuth community system with role-sync,
+        permissions management, and web access control.
+      </div>
+    </div>
 
-<div class="project-body">
-Moderation, verification, ticketing, and command systems
-built with modular architecture.
-</div>
-</div>
+    <!-- DISCORD SYSTEMS -->
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-header">
+        <div class="logo placeholder">DS</div>
+        <div>
+          <h3>Discord Bot Systems</h3>
+          <p>Automation Infrastructure</p>
+        </div>
+      </div>
 
-</div>
+      <div class="project-body">
+        Modular Discord bots for moderation, verification, ticket systems,
+        commands, and also server automations.
+      </div>
+    </div>
+
+  </div>
 </div>
 
 </section>
 
 <!-- CONTACT -->
 <section class="section contact">
-<div>Discord: jayden_aj470</div>
-<div>Email: axionlabs.cc</div>
-<div>GitHub: LondonCityRoleplay</div>
-<div>Instagram: @axi0n_labs</div>
-<div>Threads: @axi0n_labs</div>
-<div>Facebook: Axion Labs</div>
+Discord: jayden_aj470<br>
+Email: axionlabs.cc<br>
+GitHub: LondonCityRoleplay<br>
+Instagram: @axi0n_labs<br>
+Threads: @axi0n_labs<br>
+Facebook: Axion Labs<br>
 </section>
 
-<script type="module" src="src/main.js"></script>
+<script src="src/main.js"></script>
+
 </body>
 </html>
