@@ -1,36 +1,27 @@
 let currentPage = "home";
 
-function show(id) {
-  if (!id) return;
-  if (id === currentPage) return;
-
-  const current = document.getElementById(currentPage);
+function showPage(id) {
+  const current = document.querySelector(".page.active");
   const next = document.getElementById(id);
+
+  if (!next || current?.id === id) return;
 
   if (current) {
     current.classList.remove("active");
   }
 
   setTimeout(() => {
-    if (next) {
-      next.classList.add("active");
-    }
-  }, 80);
+    next.classList.add("active");
+  }, 50);
 
   currentPage = id;
 }
 
-function init() {
-  const pages = document.querySelectorAll(".page");
+window.showPage = showPage;
 
-  // HARD RESET: which ensures clean state
-  pages.forEach(p => p.classList.remove("active"));
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
 
   const home = document.getElementById("home");
   if (home) home.classList.add("active");
-
-  currentPage = "home";
-}
-
-window.show = show;
-window.addEventListener("DOMContentLoaded", init);
+});
