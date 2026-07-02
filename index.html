@@ -1,111 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jayden | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayden | Portfolio</title>
 
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <img src="assets/profile.png" class="avatar">
-    <div>
-      <h1>Jayden</h1>
-      <p>Full Stack Developer • API Systems • Discord Bots</p>
-    </div>
-  </header>
+<section id="boot">
+<pre class="boot">
+┌──────────────────────────────────────────────┐
+│                                              │
+│              Boot Sequence                   │
+│                                              │
+└──────────────────────────────────────────────┘
+</pre>
+</section>
 
-  <main class="content">
+<section id="intro" class="hidden">
+  <div class="glass intro">
+    <h1>Jayden</h1>
+    <p>About Me</p>
+    <p>Skills</p>
+  </div>
+</section>
 
-    <section class="card">
-      <h2>About me</h2>
-      <p>I like to make modern website applications, Website Frontend & Backend, I work with API integration, 
+<div id="detailPanel"></div>
+
+<nav id="nav" class="glass nav hidden">
+  <button onclick="navigate('about')">About</button>
+  <button onclick="navigate('projects')">Projects</button>
+  <button onclick="navigate('skills')">Skills</button>
+  <button onclick="navigate('contact')">Contact</button>
+</nav>
+
+<main id="app" class="hidden">
+
+<header class="glass header">
+  <img src="assets/profile.png" class="avatar">
+
+  <div>
+    <h1>Jayden</h1>
+    <p>Full Stack Developer • API Systems • Discord Bots</p>
+  </div>
+</header>
+
+<section id="status" class="glass">
+<h2>Live System Status</h2>
+<ul>
+<li><span class="dot"></span> Backend Online</li>
+<li><span class="dot"></span> API Systems Online</li>
+<li><span class="dot"></span> Discord Bots Running</li>
+<li><span class="dot"></span> Database Connected</li>
+<li><span class="dot"></span> Current Project: Axion Labs</li>
+</ul>
+</section>
+
+<section id="about" class="glass">
+<h2>About me</h2>
+<p>I like to make modern website applications, Website Frontend & Backend, I work with API integration, 
 I have and am making it possible for users to host their bots / GitHub Repos on my website 
 also purchase website Domains from my website, I also make Discord Bots.</p>
-    </section>
+</section>
 
-    <section class="card">
-      <h2>Personal Focus</h2>
-      <p>Front-end & Back-end Web applications, API integrations, Axion-Labs Mobile & web, Building a game project</p>
-    </section>
+<section class="glass">
+<h2>Personal Focus</h2>
+<p>Front-end & Back-end Web applications, API integrations, Axion-Labs Mobile & web, Building a game project</p>
+</section>
 
-    <section class="card">
-      <h2>GitHub Purpose</h2>
-      <p>I use GitHub to sometimes code stuff like Discord Bots, integrations, or connect APIs together for database purposes to ensure nothing is lost.</p>
-    </section>
+<section class="glass">
+<h2>GitHub Purpose</h2>
+<p>I use GitHub to sometimes code stuff like Discord Bots, integrations, or connect APIs together for database purposes.</p>
+</section>
 
-    <section class="card">
-      <h2>Projects</h2>
+<section id="projects" class="glass">
+<h2>Projects</h2>
 
-      <h3>Axion Labs</h3>
-      <p>This is probably the project I’ve spent the most time on. I’m still working on it and adding new features and that whenever I get new ideas. 
-Right now I’m currently building a mobile app that works with the website, along with things like Discord bot hosting, GitHub repository hosting and domain purchases.
-It’s pretty much my biggest ongoing project.</p>
+<div class="grid">
 
-      <h3>London City Roleplay</h3>
-      <p>This is a Roblox game I’m currently making along with a few developers I have helping me out here n there. 
-Alongside the game,I have built a website that connects to Discord side for the community so everything works from discord <-> website and vice versa.</p>
+<div class="card">
+<img src="assets/axion-labs.png">
+<h3>Axion Labs</h3>
+</div>
 
-      <h3>Discord Bots</h3>
-      <p>I’ve made a lot of Discord bots over the years,
-mostly for moderation, tickets, verification and connecting APIs with databases.
-I usually build them to make things easier to manage instead of doing everything manually and to keep everything
-in one place without having to do everything manually</p>
+<div class="card">
+<img src="assets/lcrp.png">
+<h3>London City Roleplay</h3>
+</div>
 
-      <h3>Other Stuff</h3>
-      <p>If I think of something interesting, I’ll usually build it. 
-Sometimes it’s a website, sometimes it’s a backend system or an API. 
-I enjoy trying new ideas and seeing if I can make them work.</p>
-    </section>
+</div>
 
-    <section class="card">
-      <h2>Skills</h2>
+<h3>Discord Bots</h3>
+<p>Moderation, tickets, verification, API integrations, database systems.</p>
 
-      <p>
-        HTML • CSS • JavaScript • TypeScript • C# • C++ • Python • Lua • PHP • Assembly • Rust
-      </p>
+<h3>Other Stuff</h3>
+<p>Random systems, APIs, tools, experiments.</p>
 
-      <p>
-        React • Tailwind CSS • Node.js • Express • MongoDB • PostgreSQL • GitHub • Discord.js • REST APIs
-      </p>
-    </section>
+</section>
 
-    <section class="card">
-      <h2>Websites</h2>
+<section id="skills" class="glass">
+<h2>Skills</h2>
+<p>HTML • CSS • JavaScript • TypeScript • C# • C++ • Python • Lua • PHP • Assembly • Rust</p>
+<p>React • Tailwind • Node.js • Express • MongoDB • PostgreSQL • Discord.js • REST APIs</p>
+</section>
 
-      <p>London City Roleplay — https://londoncityroleplay.org/</p>
-      <p>Axion Labs — https://axion-labs.dev</p>
-      <p>Axion Labs Bot — https://axionlabs.cc</p>
-    </section>
+<section class="glass">
+<h2>Websites</h2>
+<p>London City Roleplay — https://londoncityroleplay.org/</p>
+<p>Axion Labs — https://axion-labs.dev</p>
+<p>Axion Labs Bot — https://axionlabs.cc</p>
+</section>
 
-    <section class="card">
-      <h2>Contact</h2>
+<section id="contact" class="glass">
+<h2>Contact</h2>
+<p>Discord: jayden_aj470</p>
+<p>Axion Labs: @axionlabs.cc</p>
+<p>Instagram: @axi0n_labs</p>
+<p>Threads: @axi0n_labs</p>
+<p>Facebook: @Axion Labs</p>
+<p>https://discord.gg/RfWcJcXGMQ</p>
+</section>
 
-      <p>Discord: jayden_aj470</p>
+</main>
 
-      <p>
-        Axion Labs: @axionlabs.cc<br>
-        Instagram: @axi0n_labs<br>
-        Threads: @axi0n_labs<br>
-        Facebook: @Axion Labs
-      </p>
+<footer>© 2026 Jayden</footer>
 
-      <p>
-        London City Roleplay:<br>
-        https://discord.gg/RfWcJcXGMQ<br>
-        https://londoncityroleplay.org/
-      </p>
-    </section>
+<script src="src/main.js"></script>
+<script src="src/animations.js"></script>
+<script src="src/typing.js"></script>
 
-  </main>
-
-  <footer>
-    © 2026 Jayden
-  </footer>
-
-  <script src="js/app.js"></script>
 </body>
 </html>
