@@ -5,6 +5,7 @@ background: #05060a;
 color: #bffbff;
 }
 
+/* GRID BACKGROUND */
 .grid {
 position: fixed;
 width: 100%;
@@ -16,6 +17,7 @@ background-size: 60px 60px;
 z-index: -2;
 }
 
+/* SCANLINES */
 .scanlines {
 position: fixed;
 width: 100%;
@@ -30,6 +32,7 @@ transparent 4px
 z-index: -1;
 }
 
+/* HERO */
 .hero {
 text-align: center;
 padding: 40px 20px;
@@ -40,18 +43,47 @@ width: 90px;
 height: 90px;
 border-radius: 8px;
 border: 1px solid cyan;
+object-fit: cover;
 }
 
-h1 {
+/* TITLE */
+.name-line {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+margin: 10px 0;
 font-family: Orbitron;
 color: cyan;
-margin: 10px 0;
 }
 
+/* VERIFIED ICON */
+.verified-icon {
+width: 18px;
+height: 18px;
+object-fit: contain;
+flex-shrink: 0;
+transform: translateY(-1px);
+filter: drop-shadow(0 0 6px cyan);
+}
+
+/* USERNAME BADGE */
+.username-badge {
+display: block;
+margin: 6px auto 0 auto;
+width: 80px;
+height: auto;
+object-fit: contain;
+opacity: 0.95;
+filter: drop-shadow(0 0 8px rgba(0,255,255,0.4));
+}
+
+/* SUBTITLE */
 .subtitle {
 opacity: 0.8;
 }
 
+/* BADGES */
 .badges span {
 display: inline-block;
 border: 1px solid cyan;
@@ -59,6 +91,7 @@ padding: 5px 10px;
 margin: 5px;
 }
 
+/* SECTION */
 .section {
 max-width: 900px;
 margin: auto;
@@ -90,10 +123,6 @@ letter-spacing: 0.3px;
 display: block;
 }
 
-.accordion-body br {
-display: block;
-margin-bottom: 6px;
-
 /* PROJECT */
 .project {
 border: 1px solid rgba(0,255,255,0.2);
@@ -112,11 +141,10 @@ align-items: center;
 width: 45px;
 height: 45px;
 border: 1px solid cyan;
-display: flex;
-align-items: center;
-justify-content: center;
+object-fit: cover;
 }
 
+/* PROJECT BODY */
 .project-body {
 display: none;
 padding: 15px;
@@ -126,49 +154,16 @@ padding: 15px;
 display: block;
 }
 
+/* CONTACT */
 .contact {
 text-align: center;
 padding: 40px;
 opacity: 0.8;
 }
 
-.name-line {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-margin: 10px 0;
-font-family: Orbitron;
-color: cyan;
-}
-
-.verified-icon {
-width: 18px;
-height: 18px;
-object-fit: contain;
-flex-shrink: 0;
-transform: translateY(-1px);
-}
-
-.username-badge {
-  display: block;
-  margin: 6px auto 0 auto;
-  width: 90px;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.95;
-}
-
-.verified-icon {
-  filter: drop-shadow(0 0 6px cyan);
-}
-  
-.username-badge {
-  filter: drop-shadow(0 0 8px rgba(0,255,255,0.4));
-}
-
+/* PRE-FORMATTED TEXT SYSTEM */
 .preformat {
-  white-space: pre-wrap;
-  line-height: 1.6;
-  letter-spacing: 0.3px;
+white-space: pre-wrap;
+line-height: 1.6;
+letter-spacing: 0.3px;
 }
