@@ -1,8 +1,4 @@
-main section {
-  display: none;
-}
-
-body {
+html, body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #0b0f14;
@@ -84,6 +80,8 @@ footer {
   z-index: 999;
 }
 
+/* NAV */
+
 .nav-wrapper {
   position: fixed;
   top: 20px;
@@ -124,18 +122,10 @@ footer {
   flex-direction: column;
   gap: 8px;
   z-index: 99999;
-
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: 0.2s ease;
 }
 
 .nav-menu.open {
   display: flex;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
 }
 
 .nav-menu button,
