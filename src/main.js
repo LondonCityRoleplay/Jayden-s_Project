@@ -28,13 +28,15 @@ function toggleProject(el, event) {
   el.classList.toggle("active");
 }
 
+/* Nested toggle system (license / logs etc.) */
 function toggle(el) {
   const body = el.nextElementSibling;
   if (!body) return;
+
   body.classList.toggle("open");
 }
 
-/* LIVE TAB SYSTEM */
+/* LIVE DASHBOARD TAB SYSTEM */
 function switchTab(site, el) {
   const frame = document.getElementById("previewFrame");
   if (!frame) return;
@@ -45,15 +47,15 @@ function switchTab(site, el) {
 
   el.classList.add("active");
 
-  if (site === "Axion Labs") {
+  if (site === "axion") {
     frame.src = "https://axion-labs.dev";
   }
 
-  if (site === "Axion Labs Bot") {
+  if (site === "bot") {
     frame.src = "https://axionlabs.cc";
   }
 
-  if (site === "London City Roleplay") {
+  if (site === "lcr") {
     frame.src = "https://londoncityroleplay.org";
   }
 }
@@ -71,4 +73,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const home = document.getElementById("home");
   if (home) home.classList.add("active");
+
+  /* this fix prevents the live dashboard clicks from closing project */
+  const dashboard = document.querySelector(".live-dashboard");
+  if (dashboard) {
+    dashboard.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
 });
