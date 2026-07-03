@@ -326,3 +326,55 @@ a:hover {
 .log-body.open {
   display: block;
 }
+
+.live-dashboard .tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 12px;
+  border: 1px solid rgba(0,255,255,0.3);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+.tab:hover {
+  border-color: cyan;
+}
+
+.tab.active {
+  background: rgba(0,255,255,0.1);
+  border-color: cyan;
+}
+
+.status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status.online {
+  background: lime;
+  box-shadow: 0 0 8px lime;
+}
+
+.status.offline {
+  background: red;
+  box-shadow: 0 0 8px red;
+}
+
+#previewFrame {
+  width: 100%;
+  height: 500px;
+  border: 1px solid rgba(0,255,255,0.25);
+  border-radius: 6px;
+  background: #000;
+}
