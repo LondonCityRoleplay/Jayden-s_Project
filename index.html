@@ -83,6 +83,45 @@ Software • Back-end • Front-end • Infrastructure
 
   <div class="accordion-body preformat">
 
+    <div class="project live-dashboard">
+
+  <div class="project-header">
+    <div class="logo">LIVE</div>
+    <div>
+      <h3>Live Systems Dashboard</h3>
+      <p>Multi-site preview control panel</p>
+    </div>
+  </div>
+
+  <div class="project-body">
+
+    <!-- TABS -->
+    <div class="tabs">
+
+      <div class="tab active" onclick="switchTab('axion', this)">
+        Axion Labs
+        <span class="status offline"></span>
+      </div>
+
+      <div class="tab" onclick="switchTab('bot', this)">
+        Axion Bot
+        <span class="status offline"></span>
+      </div>
+
+      <div class="tab" onclick="switchTab('lcr', this)">
+        London City Roleplay
+        <span class="status online"></span>
+      </div>
+
+    </div>
+
+    <!-- PREVIEW WINDOW -->
+    <iframe id="previewFrame" src="https://londoncityroleplay.org"></iframe>
+
+  </div>
+
+</div>
+
     <!-- AXION LABS -->
     <div class="project" onclick="toggleProject(this, event)">
 
