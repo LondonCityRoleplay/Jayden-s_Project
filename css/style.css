@@ -343,6 +343,7 @@ a:hover {
   align-items: center;
   gap: 6px;
   transition: 0.2s;
+  user-select: none;
 }
 
 .tab:hover {
@@ -377,4 +378,8 @@ a:hover {
   border: 1px solid rgba(0,255,255,0.25);
   border-radius: 6px;
   background: #000;
+}
+
+.live-dashboard iframe {
+  pointer-events: auto;
 }
