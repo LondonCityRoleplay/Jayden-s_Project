@@ -35,9 +35,82 @@ body {
   z-index: -1;
 }
 
+/* ---------- NAV ---------- */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(5,6,10,.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,255,255,.2);
+}
+
+.nav-brand {
+  font-family: "Orbitron", sans-serif;
+  color: cyan;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.topnav ul#menu {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.topnav ul#menu a {
+  color: #bffbff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: .5px;
+  transition: .2s;
+}
+
+.topnav ul#menu a:hover {
+  color: cyan;
+  text-shadow: 0 0 8px cyan;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid cyan;
+  color: cyan;
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+
+  .topnav ul#menu {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    background: #05060a;
+    flex-direction: column;
+    padding: 14px 20px;
+    display: none;
+    border-bottom: 1px solid rgba(0,255,255,.25);
+  }
+
+  .topnav ul#menu.open {
+    display: flex;
+  }
+}
+
 .hero {
   text-align: center;
-  padding: 45px 20px;
+  padding: 100px 20px 45px;
 }
 
 .profile {
@@ -63,6 +136,23 @@ body {
 .subtitle {
   font-size: 17px;
   opacity: .75;
+  min-height: 24px;
+}
+
+.subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  background: cyan;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 .badges {
@@ -87,6 +177,14 @@ body {
   max-width: 950px;
   margin: auto;
   padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .accordion {
@@ -106,6 +204,19 @@ body {
   font-weight: 700;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title::after {
+  content: "+";
+  font-size: 20px;
+  transition: transform .2s;
+}
+
+.accordion.active .accordion-title::after {
+  content: "–";
 }
 
 .accordion-body {
@@ -189,11 +300,53 @@ body {
   display: block;
 }
 
+/* ---------- CONTACT ---------- */
 .contact {
-  text-align: center;
   padding: 50px 20px;
-  opacity: .85;
-  line-height: 2;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid rgba(0,255,255,.25);
+  border-radius: 6px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.contact-card:hover {
+  border-color: cyan;
+  box-shadow: 0 0 14px rgba(0,255,255,.15);
+}
+
+.contact-label {
+  font-size: 12px;
+  opacity: .6;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  color: cyan;
+  font-weight: 600;
+}
+
+.contact-card:hover .contact-value {
+  text-shadow: 0 0 8px cyan;
+}
+
+@media (max-width: 600px) {
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
 img {
@@ -204,10 +357,6 @@ img {
 a {
   color: cyan;
   text-decoration: none;
-}
-
-a:hover {
-  text-shadow: 0 0 8px cyan;
 }
 
 ::-webkit-scrollbar {
@@ -230,7 +379,7 @@ a:hover {
 @media (max-width: 768px) {
 
   .hero {
-    padding: 30px 15px;
+    padding: 90px 15px 30px;
   }
 
   .profile {
@@ -330,7 +479,7 @@ a:hover {
 .live-dashboard .tabs {
   display: flex;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
 
@@ -353,6 +502,20 @@ a:hover {
 .tab.active {
   background: rgba(0,255,255,0.1);
   border-color: cyan;
+}
+
+.tab-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  opacity: .7;
+  margin-bottom: 14px;
+}
+
+.tab-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .status {
