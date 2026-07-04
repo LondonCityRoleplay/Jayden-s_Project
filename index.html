@@ -15,6 +15,20 @@
 <div class="grid"></div>
 <div class="scanlines"></div>
 
+<!-- NAV -->
+<nav class="topnav">
+  <div class="nav-brand">JAYDEN</div>
+
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+
+  <ul id="menu">
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+    <li><a href="#license" onclick="toggleMenu()">License</a></li>
+    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HEADER -->
 <header class="hero">
 
@@ -24,9 +38,7 @@
   JAYDEN’s PORTFOLIO
 </h1>
 
-<p class="subtitle">
-Software • Back-end • Front-end • Infrastructure
-</p>
+<p class="subtitle" id="typedSubtitle" data-text="Software • Back-end • Front-end • Infrastructure"></p>
 
 <div class="badges">
 <span>Infrastructure</span>
@@ -40,9 +52,9 @@ Software • Back-end • Front-end • Infrastructure
 </header>
 
 <!-- ABOUT ME -->
-<section class="section">
+<section class="section" id="about">
 
-<div class="accordion" onclick="toggleAccordion(this)">
+<div class="accordion active" onclick="toggleAccordion(this)">
   <div class="accordion-title">ABOUT ME</div>
 
   <div class="accordion-body preformat">
@@ -75,7 +87,7 @@ Software • Back-end • Front-end • Infrastructure
 </section>
 
 <!-- SYSTEMS -->
-<section class="section">
+<section class="section" id="projects">
 
 <div class="accordion" onclick="toggleAccordion(this)">
 
@@ -113,6 +125,11 @@ Software • Back-end • Front-end • Infrastructure
         <span class="status online"></span>
       </div>
 
+    </div>
+
+    <div class="tab-legend">
+      <span><span class="status online"></span> Online</span>
+      <span><span class="status offline"></span> Offline</span>
     </div>
 
     <!-- PREVIEW WINDOW -->
@@ -261,6 +278,9 @@ Automate Discord servers and reduce manual staff workload.
 
 </section>
 
+<!-- LICENSE -->
+<section class="section" id="license">
+
 <div class="accordion" onclick="toggleAccordion(this)">
   <div class="accordion-title">LICENSE</div>
 
@@ -327,72 +347,71 @@ Automate Discord servers and reduce manual staff workload.
 
   </div>
 </div>
-  
-<!-- CONTACT -->
-<section class="section contact">
-
-Discord:
-<a href="https://discord.com/users/1477177354387198062" target="_blank">
-jayden_aj470
-</a>
-<br>
-
-Email:
-<a href="Axi0nlabs@proton.me">
-Support
-</a>
-<br>
-
-Axion Labs:
-<a href="https://axion-labs.dev" target="_blank">
-Website
-</a>
-<br>
-
-Axion Labs Bot:
-<a href="https://axionlabs.cc" target="_blank">
-Website
-</a>
-<br>
-
-London City Roleplay:
-<a href="https://londoncityroleplay.org" target="_blank">
-website 
-</a>
-<br>
-
-London City Roleplay:
-<a href="https://discord.gg/RfWcJcXGMQ" target="_blank">
-Discord Server
-</a>
-<br>
-  
-GitHub:
-<a href="https://github.com/LondonCityRoleplay" target="_blank">
-LondonCityRoleplay
-</a>
-<br>
-
-Instagram:
-<a href="https://www.instagram.com/axi0n_labs?igsh=MTJodjFrN2s5N3pkeQ%3D%3D&utm_source=qr" target="_blank">
-@axi0n_labs
-</a>
-<br>
-
-Threads:
-<a href="https://www.threads.com/@axi0n_labs" target="_blank">
-@axi0n_labs
-</a>
-<br>
-
-Facebook:
-<a href="https://www.facebook.com/share/1BpH57RJDK/?mibextid=wwXIfr" target="_blank">
-Axion Labs
-</a>
 
 </section>
 
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+
+<div class="contact-grid">
+
+  <a href="https://discord.com/users/1477177354387198062" target="_blank" class="contact-card">
+    <span class="contact-label">Discord</span>
+    <span class="contact-value">jayden_aj470</span>
+  </a>
+
+  <a href="mailto:Axi0nlabs@proton.me" class="contact-card">
+    <span class="contact-label">Email</span>
+    <span class="contact-value">Support</span>
+  </a>
+
+  <a href="https://axion-labs.dev" target="_blank" class="contact-card">
+    <span class="contact-label">Axion Labs</span>
+    <span class="contact-value">Website</span>
+  </a>
+
+  <a href="https://axionlabs.cc" target="_blank" class="contact-card">
+    <span class="contact-label">Axion Labs Bot</span>
+    <span class="contact-value">Website</span>
+  </a>
+
+  <a href="https://londoncityroleplay.org" target="_blank" class="contact-card">
+    <span class="contact-label">London City Roleplay</span>
+    <span class="contact-value">Website</span>
+  </a>
+
+  <a href="https://discord.gg/RfWcJcXGMQ" target="_blank" class="contact-card">
+    <span class="contact-label">London City Roleplay</span>
+    <span class="contact-value">Discord Server</span>
+  </a>
+
+  <a href="https://github.com/LondonCityRoleplay" target="_blank" class="contact-card">
+    <span class="contact-label">GitHub</span>
+    <span class="contact-value">LondonCityRoleplay</span>
+  </a>
+
+  <a href="https://www.instagram.com/axi0n_labs?igsh=MTJodjFrN2s5N3pkeQ%3D%3D&utm_source=qr" target="_blank" class="contact-card">
+    <span class="contact-label">Instagram</span>
+    <span class="contact-value">@axi0n_labs</span>
+  </a>
+
+  <a href="https://www.threads.com/@axi0n_labs" target="_blank" class="contact-card">
+    <span class="contact-label">Threads</span>
+    <span class="contact-value">@axi0n_labs</span>
+  </a>
+
+  <a href="https://www.facebook.com/share/1BpH57RJDK/?mibextid=wwXIfr" target="_blank" class="contact-card">
+    <span class="contact-label">Facebook</span>
+    <span class="contact-value">Axion Labs</span>
+  </a>
+
+</div>
+
+</section>
+
+<script src="src/typing.js"></script>
 <script src="src/main.js"></script>
+<script src="src/animations.js"></script>
 
 </body>
 </html>
