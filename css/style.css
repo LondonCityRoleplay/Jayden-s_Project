@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Rajdhani", sans-serif;
   background: #05060a;
@@ -180,6 +184,7 @@ body {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .6s ease, transform .6s ease;
+  scroll-margin-top: 90px;
 }
 
 .section.show {
@@ -462,18 +467,13 @@ a {
 
 .log-header {
   padding: 10px;
-  cursor: pointer;
   color: cyan;
   font-weight: bold;
+  border-bottom: 1px solid rgba(0,255,255,0.15);
 }
 
 .log-body {
-  display: none;
   padding: 10px;
-}
-
-.log-body.open {
-  display: block;
 }
 
 .live-dashboard .tabs {
