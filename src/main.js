@@ -28,16 +28,6 @@ function toggleProject(el, event) {
   el.classList.toggle("active");
 }
 
-/* Nested toggle system (license / logs etc.) */
-function toggle(el, event) {
-  if (event) event.stopPropagation();
-
-  const body = el.nextElementSibling;
-  if (!body) return;
-
-  body.classList.toggle("open");
-}
-
 /* LIVE DASHBOARD TAB SYSTEM */
 function switchTab(site, el) {
   const frame = document.getElementById("previewFrame");
@@ -62,12 +52,17 @@ function switchTab(site, el) {
   }
 }
 
+/* NAV LINK HANDLING */
+function revealSection(id) {
+  const target = document.getElementById(id);
+  if (target) target.classList.add("show");
+}
+
 /* GLOBAL EXPORTS */
 window.showPage = showPage;
 window.toggleMenu = toggleMenu;
 window.toggleAccordion = toggleAccordion;
 window.toggleProject = toggleProject;
-window.toggle = toggle;
 window.switchTab = switchTab;
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -82,5 +77,16 @@ window.addEventListener("DOMContentLoaded", () => {
     dashboard.addEventListener("click", (e) => {
       e.stopPropagation();
     });
+  }
+
+  document.querySelectorAll('.topnav a[href^="#"]').forEach(link => {
+    link.addEventListener("click", () => {
+      const id = link.getAttribute("href").slice(1);
+      revealSection(id);
+    });
+  });
+
+  if (location.hash) {
+    revealSection(location.hash.slice(1));
   }
 });
