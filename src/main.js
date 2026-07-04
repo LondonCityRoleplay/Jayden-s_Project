@@ -29,7 +29,9 @@ function toggleProject(el, event) {
 }
 
 /* Nested toggle system (license / logs etc.) */
-function toggle(el) {
+function toggle(el, event) {
+  if (event) event.stopPropagation();
+
   const body = el.nextElementSibling;
   if (!body) return;
 
